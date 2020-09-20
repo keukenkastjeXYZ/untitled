@@ -1,0 +1,13 @@
+.Year{
+    background-color: red;
+}
+h1, h3 {
+    text-align: center;
+}
+.introduction{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.countdown{
+    margin-top: 60px;
+}

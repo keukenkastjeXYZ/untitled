@@ -1,0 +1,19 @@
+mat-expansion-panel{
+    background-color: #034378;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.main-title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.mat-expansion-panel-header-title{
+    color: aliceblue;
+}
+.price-to-pay-title{
+    margin-bottom: 2px;
+}
+.price-to-pay-description{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,80 @@
+<div class="coupon">
+    <h2>
+        Your available points: 555
+    </h2>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="iconify" data-icon="ant-design:shopping-cart-outlined" data-inline="false"></span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngIf="card.length === 0">Your shopping card is empty.</div>
+        <div *ngFor="let coupon of card;">
+            <app-card>
+                <span card-body>
+                    {{coupon.title}}
+                </span>
+            </app-card>
+        </div>
+        <button mat-button *ngIf="card.length !== 0" (click)="this.checkOut()">Checkout</button>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Rules
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-card>
+            <span card-body>
+                You can claim a coupon by stating the name of the coupon to your life buddy.<br/>
+                --------<br/>
+                Coupons can only be bought once per month, except if stated otherwise.<br/>
+                --------<br/>
+                There can only be bought a maximum two coupons per week.<br/>
+                --------<br/>
+                Points are only redeemable once and cannot be refunded.<br/>
+                --------<br/>
+                The points you earn will be added to your membership card and can be redeemed at any time.<br/>
+                --------<br/>
+                The list of rewards can be updated at any time, including the costs, and coupons for a discount can be invalidated once that happens.<br/>
+                --------<br/>
+                New rewards can be suggested and questions can be asked via telephone or (e)mail.<br/>
+                --------<br/>
+                Note rewards may be combined and can form interesting combinations.<br/>
+                --------<br/>
+                Note every time you see your life buddy in real life a random amount of points is added to your subscription.<br/>
+                --------<br/>
+                Note that these rewards are separate from all other services that you receive with your subscription.
+            </span>
+        </app-card>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Categories
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let category of categories;">
+            <app-card>
+                <div card-title>
+                    {{category.title}}
+                </div>
+                <div card-body>
+                    <div>{{category.description}}</div>
+                </div>
+            </app-card>
+        </div>
+    </mat-expansion-panel>
+    <div *ngFor="let coupon of coupons;">
+        <app-card>
+            <div card-title>
+                {{coupon.title}}
+            </div>
+            <div card-body>
+                <div>{{coupon.description}}</div>
+                <div>Cost: {{coupon.cost}}</div>
+                <button mat-button (click)="this.addToCard(coupon)">Add to card</button>
+            </div>
+        </app-card>
+    </div>
+</div>

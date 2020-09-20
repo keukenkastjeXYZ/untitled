@@ -1,0 +1,8 @@
+<mat-card [ngStyle]="{'background-color':background}">
+    <mat-card-title>
+        <ng-content select="[card-title]"></ng-content>
+    </mat-card-title>
+    <mat-card-content>
+        <ng-content select="[card-body]"></ng-content>
+    </mat-card-content>
+</mat-card>

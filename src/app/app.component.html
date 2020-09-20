@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+        <span>Life Buddy - for a lifetime</span>
+        <div style="margin-left: 20px">
+            <a mat-button [routerLink]="'/home'"> Home </a>
+            <a mat-button [routerLink]="'/subscription'"> Subscriptions </a>
+            <a mat-button [routerLink]="'/coupon'"> Coupons </a>
+            <a mat-button [routerLink]="'/poetry'"> Poetry </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div [@routeAnimations]="o && o.activatedRouteData
+      && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+</div>
+<footer>
+    <span style="font-size: 0.75rem">Copyright © 2020 Lifebuddy Solutions™</span>
+</footer>

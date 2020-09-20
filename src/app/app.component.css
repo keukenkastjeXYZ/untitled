@@ -1,0 +1,19 @@
+.app-main-style{
+    font-family: Roboto,serif;
+}
+.toolbar{
+    background-color: #000e36;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+footer{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #000e36;
+    padding: 0.25rem;
+    text-align: center;
+}
+a:hover {
+    background-color: #002061;
+}

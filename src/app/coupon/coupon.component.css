@@ -1,0 +1,21 @@
+.coupon{
+    color: aliceblue;
+    margin-bottom: 50px;
+}
+h2 {
+    text-align: center;
+}
+mat-expansion-panel{
+    background-color: #034378;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: aliceblue;
+}
+.mat-expansion-panel-header-title{
+    color: aliceblue;
+}
+button{
+    background-color: #082b31;
+    margin-top: 10px;
+}

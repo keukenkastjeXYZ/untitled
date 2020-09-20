@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Your chosen coupons</h1>
+<div mat-dialog-content *ngFor="let coupon of data;">
+    <p>- {{coupon.title}}</p>
+</div>
+<p mat-dialog-content>Make a screenshot of this form and send it to your life buddy</p>
+<div mat-dialog-actions>
+    <button mat-button cdkFocusInitial (click)="this.onClick()" style="color: aliceblue; background: #000e36">Ok</button>
+</div>
+

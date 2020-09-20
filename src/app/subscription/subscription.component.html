@@ -1,0 +1,46 @@
+<div *ngFor="let subscription of subscriptions;">
+    <div *ngIf="subscription.isCurrentSubscription">
+        <app-card>
+            <div card-title>
+                <div class="mat-display-1 main-title">
+                    Active subscription
+                </div>
+                <span class="iconify" data-icon="mdi-diamond-stone" data-inline="false"></span>
+                {{subscription.title}}
+                <span class="iconify" data-icon="mdi-diamond-stone" data-inline="false"></span>
+            </div>
+            <div card-body>
+                <div>{{subscription.description}}</div>
+                <br>
+                <h2 class="price-to-pay-title">Price to pay</h2>
+                <div class="price-to-pay-description">{{subscription.priceToPay}}</div>
+                <div>Level of interest
+                    <mat-progress-bar mode="determinate" value="{{subscription.levelOfInterest}}"></mat-progress-bar>
+                </div>
+            </div>
+        </app-card>
+    </div>
+</div>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Other available subscriptions
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div *ngFor="let subscription of subscriptions;">
+        <app-card>
+            <div card-title>
+                <mat-card-title>{{subscription.title}}</mat-card-title>
+            </div>
+            <div card-body>
+                <div>{{subscription.description}}</div>
+                <br>
+                <h2 class="price-to-pay-title">Price to pay</h2>
+                <div class="price-to-pay-description">{{subscription.priceToPay}}</div>
+                <div>Level of interest
+                    <mat-progress-bar mode="determinate" value="{{subscription.levelOfInterest}}"></mat-progress-bar>
+                </div>
+            </div>
+        </app-card>
+    </div>
+</mat-expansion-panel>
